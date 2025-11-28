@@ -1,0 +1,16 @@
+{
+  "name": "Dev Container",
+  "dockerComposeFile": ["../docker-compose.yml"],      // Adjust path if it's in root
+  "service": "web",                        // Use your actual PHP service name!
+  "workspaceFolder": "/var/www/html",                  // Must match your code mount path in Docker
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "php.validate.executablePath": "/usr/local/bin/php"
+      },
+      "extensions": [
+        "bmewburn.vscode-intelephense-client"
+      ]
+    }
+  }
+}
