@@ -1,6 +1,8 @@
 A simple template to build php web-app that is already configured with apache (a2enmod rewrite) and .htacces for pretty url
 
-** if you're using vscode makesure to download Devcontainer extensinion and Brew to ensure inIntelephense runs inside the container for code intelligence.
+** if you're using vscode make sure to download Devcontainer extension and Breww to ensure inIntelephense runs inside the container for code intelligence.
+
+
 
 Packages for debian has already been installed.
 
