@@ -1,0 +1,39 @@
+services:
+  web:
+    build: .
+    container_name: #example php app name
+    ports:
+      - "8080:80"
+    volumes:
+      - ./www:/var/www/html
+      - ./apache-config.conf:/etc/apache2/sites-enabled/000-default.conf
+    depends_on:
+      - db
+  
+  db:
+    image: mysql:8.0
+    container_name: #container name for db
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: #create new db(name)
+      MYSQL_USER: #create user 
+      MYSQL_PASSWORD: #create user password
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: #container name for phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_USER: #paste db user name
+      PMA_PASSWORD: #paste user password 
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
+
+volumes:
+  dbdata:
