@@ -3,6 +3,9 @@ A simple template to build php web-app that is already configured with apache (a
 packages for debian has already been installed.
 If ever you need more packages, update the list in Dockerfile 
 
+Localhost:8080 web root var/html/public
+Localhost:8081 phpmyadmin
+
 Docker images used
 { 
     php:8.4-apache-trixie,
