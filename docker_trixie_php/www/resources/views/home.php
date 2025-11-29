@@ -1,2 +1,3 @@
-<?$pageTitle = 'About'?>
-<h1>THIS IS THE HOME PAGE</h1>
+<h1>Hello, world!</h1>
+
+<h3>Welcome <?php echo $name ?></h3>
