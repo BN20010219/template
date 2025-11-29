@@ -1,7 +1,9 @@
 <?php
 require_once __DIR__ . '/../bootstrap/app.php';
 require_once BASE_PATH . '/vendors/spl_auto_loader.php';
+require_once BASE_PATH. '/bootstrap/envLoader.php';
 require_once BASE_PATH . '/config/routes.php';
+
 
 use App\Core\Application;
 use App\Http\Controllers\AuthController;

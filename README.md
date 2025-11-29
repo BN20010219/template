@@ -2,8 +2,6 @@ A simple template to build php web-app that is already configured with apache (a
 
 ** if you're using vscode make sure to download Devcontainer extension and Breww to ensure inIntelephense runs inside the container for code intelligence.
 
-
-
 Packages for debian has already been installed.
 
 If ever you need more packages, update the list in Dockerfile 

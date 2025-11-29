@@ -1,34 +1,18 @@
 <h1>Create an account</h1>
 
-<form action="" method="post">
-  <div class="row">
-    <div class="col">
-      <div class="mb-3">
-        <label>First Name</label>
-        <input type="text" name="first_name" class="form-control">
-      </div>
-    </div>
-    <div class="col">
-      <div class="mb-3">
-        <label>Last Name</label>
-        <input type="text" name="last_name" class="form-control">
-      </div>
-    </div>
-  </div>
+<?php $form = \App\Core\Form\Form::begin('', 'post'); ?>
 
-  <div class="mb-3">
-    <label>Email</label>
-    <input type="email" name="email" class="form-control">
+<div class="row">
+  <div
+    class="col mb-3"><?php echo $form->field($model, 'firstname'); ?>
   </div>
-  <div class="mb-3">
-    <label>Password</label>
-    <input type="password" name="password" class="form-control">
+  <div
+    class="col mb-3"><?php echo $form->field($model, 'lastname'); ?>
   </div>
-  <div class="mb-3">
-    <label>Confirm Password</label>
-    <input type="password" name="confirm_password" class="form-control">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-
-  <a href="/login" >Already have an account?</a>
-</form>
+</div>
+<?php echo $form->field($model, 'email')->emailField(); ?>
+<?php echo $form->field($model, 'password')->passwordField(); ?>
+<?php echo $form->field($model, 'confirmPassword'); ?>
+<button type="submit" class="btn btn-primary">Submit</button>
+<a href="/login">Already have an account?</a>
+<?php \App\Core\Form\Form::end() ?>
